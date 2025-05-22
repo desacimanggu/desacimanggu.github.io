@@ -1,28 +1,196 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peta Desa Cimanggu</title>
-  <style>
-    body,html{margin:0;padding:0;height:100%;font-family:sans-serif}
-    header{display:flex;align-items:center;padding:10px;background:#f4f4f4;border-bottom:1px solid #ddd}
-    header img{height:60px;margin-right:15px}
-    iframe{border:0;width:100%;height:calc(100% - 80px)}
-  </style>
+  <title>Desa Cimanggu</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Lambang_Kabupaten_Cilacap.png" alt="Logo Kabupaten Cilacap" height="60" />
-    <h1>Peta Desa Cimanggu</h1>
+    <img src="assets/logo-cilacap.png" alt="Logo Cilacap" class="logo">
+    <h1>Website Resmi Desa Cimanggu</h1>
+    <nav>
+      <ul>
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#profil">Profil</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#berita">Berita</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+        <li><a href="#formulir">Formulir</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.0243378437576!2d108.83879069999999!3d-7.3511633000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f806834d9cc01%3A0xc23b6a7fe4682ef5!2sKantor%20Kepala%20Desa%20Cimanggu!5e0!3m2!1sid!2sid!4v1747896423762!5m2!1sid!2sid"
-    allowfullscreen
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade">
-  </iframe>
+  <main>
+    <section id="beranda">
+      <h2>Selamat Datang di Desa Cimanggu</h2>
+      <p>Desa Cimanggu, Kecamatan Cimanggu, Kabupaten Cilacap - Jawa Tengah</p>
+    </section>
+
+    <section id="profil">
+      <h2>Profil Desa</h2>
+      <p>Desa Cimanggu memiliki sejarah dan budaya yang kaya serta potensi alam yang luar biasa.</p>
+    </section>
+
+    <section id="layanan">
+      <h2>Layanan Desa</h2>
+      <ul>
+        <li>Administrasi Kependudukan</li>
+        <li>Surat Pengantar</li>
+        <li>Informasi UMKM</li>
+      </ul>
+    </section>
+
+    <section id="berita">
+      <h2>Berita Desa</h2>
+      <article>
+        <h3>Penyuluhan penyakit Tetanus</h3>
+		<img src="aseets/Penyuluhan penyakit Tetanus.jpg" alt="Penyuluhan" class="foto-berita">
+        <p>Pemerintah Desa Cimanggu telah melakukan Kegiatan penyuluhan Penyakit Tetanus Kepada Kader Posyandu, hal ini dilakukan untuk menambah wawasan kepada seluruh warga masyarakat.</p>
+      </article>
+      <article>
+        <h3>Pelatihan UMKM</h3>
+		<img src="aseets/Pelatihan Pembinaan PKK Desa Cimanggu.jpg" alt="Pelatihan" class="foto-berita">
+        <p>Tujuan utama pelatihan pembinaan PKK (Pembinaan Kesejahteraan Keluarga) adalah untuk meningkatkan kemampuan dan pengetahuan kader PKK, sehingga mereka dapat menjalankan tugas dan fungsi PKK dengan lebih efektif dalam mewujudkan kesejahteraan keluarga dan masyarakat.<p>
+      </article>
+    </section>
+
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <p>Email: desacimanggucimanggucilacap@gmail.com</p>
+      <p>Alamat: Jl. Raya Cimanggu No.443, Desa cimanggu, Kecamatan Cimanggu, Cilacap, Jawa Tengah</p>
+      <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.0243378437576!2d108.83879069999999!3d-7.3511633000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f806834d9cc01%3A0xc23b6a7fe4682ef5!2sKantor%20Kepala%20Desa%20Cimanggu!5e0!3m2!1sid!2sid!4v1747896423762!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section id="formulir">
+      <h2>Formulir Pengajuan Surat</h2>
+      <form onsubmit="return kirimForm()">
+        <label>Nama:</label><br>
+        <input type="text" name="nama" required><br>
+        <label>NIK:</label><br>
+        <input type="text" name="nik" required><br>
+        <label>Jenis Surat:</label><br>
+        <select name="jenis" required>
+          <option>Surat Keterangan</option>
+          <option>Surat Domisili</option>
+          <option>Surat Pengantar</option>
+        </select><br>
+        <label>Keperluan:</label><br>
+        <textarea name="keperluan" required></textarea><br>
+        <input type="submit" value="Kirim">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pemerintah Desa Cimanggu</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #007a3d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  width: 60px;
+  float: left;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+}
+
+form input[type="submit"] {
+  background-color: #007a3d;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.map iframe {
+  border: none;
+  width: 100%;
+  height: 250px;
+  margin-top: 10px;
+}
+function kirimForm() {
+  alert("Formulir berhasil dikirim! (Simulasi)");
+  return false; // Hindari reload halaman
+}
+
+#berita {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.berita-item {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.berita-item h3 {
+  margin-bottom: 10px;
+}
+
+.foto-berita {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+	
